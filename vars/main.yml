@@ -1,0 +1,2 @@
+---
+repo_aeris: https://repo.aerisnetwork.com/pub/aeris-release-{{ansible_distribution_major_version}}.rpm

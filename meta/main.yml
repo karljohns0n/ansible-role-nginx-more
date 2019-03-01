@@ -1,0 +1,17 @@
+galaxy_info:
+  author: aeris
+  description: Nginx-more installation for CentOS
+  company: Aeris Network
+  license: license (MIT)
+  min_ansible_version: 2.4
+  platforms:
+    - name: EL
+      versions:
+        - 6
+        - 7
+  galaxy_tags:
+    - nginx
+    - nginx-more
+    - web
+    - proxy
+    - geoip

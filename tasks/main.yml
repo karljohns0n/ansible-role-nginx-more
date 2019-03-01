@@ -1,0 +1,20 @@
+---
+- name: Ensure base nginx is not installed (conflict)
+  command: rpm -q nginx
+  args:
+   warn: no
+  register: nginx_rpm_check
+  changed_when: no
+  failed_when: no
+  tags: nginx-more
+
+- name: Debug if base nginx is installed
+  debug:
+    msg: "System {{ inventory_hostname }} seems to already have nginx installed. Remove it before installing nginx-more: {{nginx_rpm_check.stdout}}"
+  when: nginx_rpm_check.rc == 0
+  tags: nginx-more
+
+- import_tasks: install.yml
+  when: nginx_rpm_check.rc == 1
+  tags:
+    - nginx-more

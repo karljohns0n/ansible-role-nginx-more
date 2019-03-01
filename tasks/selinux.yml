@@ -1,0 +1,12 @@
+---
+- name: Install SELinux management tools
+  yum:
+    name: policycoreutils-python
+    state: present
+  tags: nginx-more
+
+- name: Set nginx SELinux permissive to '{{ nginx_selinux_permissive }}'
+  selinux_permissive:
+    name: httpd_t
+    permissive: '{{ nginx_selinux_permissive }}'
+  tags: nginx-more

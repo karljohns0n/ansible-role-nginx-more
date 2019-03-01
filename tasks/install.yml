@@ -12,13 +12,13 @@
   tags: nginx-more
 
 - import_tasks: selinux.yml
-  when: ansible_selinux is defined and ansible_selinux != False and ansible_selinux.status == 'enabled' and nginx_selinux_permissive == True
+  when: ansible_selinux is defined and ansible_selinux != False and ansible_selinux.status == 'enabled' and nginx_selinux_permissive
   tags:
     - nginx-more
 
 - name: Ensure nginx is started and enabled on boot
-  service: 
-    name: nginx 
+  service:
+    name: nginx
     state: started
     enabled: yes
   tags: nginx-more

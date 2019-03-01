@@ -10,7 +10,7 @@
 
 - name: Debug if base nginx is installed
   debug:
-    msg: "System {{ inventory_hostname }} seems to already have nginx installed. Remove it before installing nginx-more: {{nginx_rpm_check.stdout}}"
+    msg: "System {{ inventory_hostname }} seems to already have nginx installed. Remove it before installing nginx-more: {{ nginx_rpm_check.stdout }}"
   when: nginx_rpm_check.rc == 0
   tags: nginx-more
 

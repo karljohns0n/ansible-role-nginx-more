@@ -8,11 +8,11 @@ This role was developed using Ansible 2.7. Backwards compatibility is not guaran
 
 ## Role Variables
 
-Nginx-more already provides a lot of built-in configuration therefore no templates are currently included in the playbook.
+Nginx-more already provides a lot of built-in configurations therefore no templates are currently included in the playbook.
 
 ### SELinux
 
-Fresh installation of nginx-more will conflict with SELinux. A role variable `nginx_selinux_permissive` is defined (boolean, default: 'true') to temporarily disable SELinux restrictions for the httpd_t context if set to `true` and if Ansible detect that SELinux is in enforcing mode. Those tasks are skipped if SELinux is disabled.
+Fresh installation of nginx-more may conflict with SELinux. A role variable `nginx_selinux_permissive` is defined (boolean, default: 'true') to temporarily disable SELinux restrictions for the httpd_t context if set to `true` and if Ansible detect that SELinux is in enforcing mode. Those tasks are skipped if SELinux is disabled.
 
 ## Dependencies
 

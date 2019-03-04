@@ -12,7 +12,7 @@ Nginx-more already provides a lot of built-in configurations therefore no templa
 
 ### SELinux
 
-Fresh installation of nginx-more may conflict with SELinux. A role variable `nginx_selinux_permissive` is defined (boolean, default: 'true') to temporarily disable SELinux restrictions for the httpd_t context if set to `true` and if Ansible detect that SELinux is in enforcing mode. Those tasks are skipped if SELinux is disabled.
+Fresh installation of nginx-more may conflict with SELinux. A role variable `nginx_selinux_permissive` is defined (boolean, default: 'true') to temporarily disable SELinux restrictions for the httpd_t context if set to `true` and if Ansible detects that SELinux is in enforcing mode. Those tasks are skipped if SELinux is disabled.
 
 ## Dependencies
 
@@ -22,7 +22,7 @@ Clean OS installation without a Web server (apache, nginx, etc..) installed. The
 
     - hosts: servers
       roles:
-         - { role: aeris.nginx-more }
+         - { role: karljohns0n.nginx-more }
 
 ## License
 

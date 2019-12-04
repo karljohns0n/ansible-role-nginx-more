@@ -1,6 +1,9 @@
 # Ansible Role: nginx-more
 
-This role installs nginx-more for CentOS / RedHat. Nginx-more is a build of Nginx with additional modules such as HTTP2, PageSpeed, Brotli, More Headers, Cache Purge, VTS, GeoIP2. It's compiled using recent GCC version and latest OpenSSL sources. It also includes some built-in configurations such as WordPress and Laravel php-fpm setup. More information can be found on this package [here](https://github.com/karljohns0n/nginx-more).
+[![ProjectStatus](https://img.shields.io/badge/status-active-brightgreen.svg)](#)
+[![Build](https://img.shields.io/travis/karljohns0n/ansible-role-nginx-more/master.svg)](https://travis-ci.org/karljohns0n/ansible-role-nginx-more)
+
+This role installs nginx-more for CentOS / RHEL. Nginx-more is a build of Nginx with additional modules such as HTTP2, PageSpeed, Brotli, More Headers, Cache Purge, VTS, GeoIP2. It's compiled using recent GCC version and latest OpenSSL sources. It also includes some built-in configurations such as WordPress and Laravel php-fpm setup. More information can be found on this package [here](https://github.com/karljohns0n/nginx-more).
 
 ## Requirements
 
